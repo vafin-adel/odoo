@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="college_group_form" model="ir.ui.view">
+            <field name="name">college_group_form</field>
+            <field name="model">college.group</field>
+            <field name="arch" type="xml">
+                <form string="College Group">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="college_group_tree" model="ir.ui.view">
+            <field name="name">college_group_tree</field>
+            <field name="model">college.group</field>
+            <field name="arch" type="xml">
+                <tree string="College Group">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_college_group" model="ir.actions.act_window">
+            <field name="name">College Groups</field>
+            <field name="res_model">college.group</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="College Groups" parent="college_root"
+        id="menu_college_group" action="action_college_group"/>
+
+
+    </data>
+</odoo>
