@@ -13,6 +13,7 @@
         "security/ir.model.access.csv",
         "views/menu.xml",
         "views/group.xml",
+        "views/course.xml",
     ],
     'qweb': [],
     'installable': True,
