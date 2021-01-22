@@ -14,6 +14,8 @@
         "views/menu.xml",
         "views/group.xml",
         "views/course.xml",
+        "views/student.xml",
+
     ],
     'qweb': [],
     'installable': True,
