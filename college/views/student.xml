@@ -10,6 +10,9 @@
                     <sheet>
                         <group>
                             <field name="name"/>
+                            <field name="birthday"/>
+                            <field name="country"/>
+                            <field name="group"/>
                         </group>
                     </sheet>
                 </form>
@@ -22,6 +25,7 @@
             <field name="arch" type="xml">
                 <tree string="College Student">
                     <field name="name"/>
+                    <field name="group"/>
                 </tree>
             </field>
         </record>

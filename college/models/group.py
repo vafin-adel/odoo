@@ -7,3 +7,5 @@ class CollegeGroup(models.Model):
     _description = "College Group"
 
     name = fields.Char(string='Name', required=True)
+    year = fields.Integer(string='Year')
+    students = fields.One2many("college.student", "group", string = "Students")
