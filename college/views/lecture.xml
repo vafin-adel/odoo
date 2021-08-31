@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="course_lecture_form" model="ir.ui.view">
+            <field name="name">course_lecture_form</field>
+            <field name="model">course.lecture</field>
+            <field name="arch" type="xml">
+                <form string="Course Lecture">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="course"/>
+                            <field name="document"/>
+                            <field name="description"/>
+                            <field name="duration" widget="float_time"/>
+                            <field name="image" widget="image"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="course_lecture_tree" model="ir.ui.view">
+            <field name="name">course_lecture_tree</field>
+            <field name="model">course.lecture</field>
+            <field name="arch" type="xml">
+                <tree string="Course Lecture">
+                    <field name="name"/>
+                    <field name="course"/>
+                    <field name="duration" widget="float_time" sum="Total Hours"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_course_lecture" model="ir.actions.act_window">
+            <field name="name">Course Lecture</field>
+            <field name="res_model">course.lecture</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Course Lecture" parent="college_root"
+        id="menu_course_lecture" action="action_course_lecture"/>
+
+
+    </data>
+</odoo>

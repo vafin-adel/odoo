@@ -15,6 +15,7 @@
         "views/group.xml",
         "views/course.xml",
         "views/student.xml",
+        "views/lecture.xml",
 
     ],
     'qweb': [],

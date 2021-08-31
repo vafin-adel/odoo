@@ -7,3 +7,4 @@ class CollegeCourse(models.Model):
     _description = "College Course"
 
     name = fields.Char(string='Name', required=True)
+    lectures = fields.One2many(comodel_name="course.lecture", inverse_name="course", string = "Lectures")
