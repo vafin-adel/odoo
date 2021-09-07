@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-
         <record id="college_student_form" model="ir.ui.view">
             <field name="name">college_student_form</field>
             <field name="model">college.student</field>
             <field name="arch" type="xml">
+
                 <form string="College Student">
+                    <header>
+                        <field name="state" widget="statusbar" options="{'clickable': '1'}"/>
+                    </header>
                     <sheet>
                         <group>
                             <field name="name"/>
                             <field name="birthday"/>
-                            <field name="country"/>
                             <field name="group"/>
+                            <field name="country"/>
+                            <field name="phone"/>
+                            <field name="mail"/>
+                            <field name="image" widget="image"/>
                         </group>
                     </sheet>
                 </form>
@@ -37,7 +43,7 @@
         </record>
 
         <menuitem name="College Students" parent="college_root"
-        id="menu_college_student" action="action_college_student"/>
+                  id="menu_college_student" action="action_college_student"/>
 
 
     </data>
